@@ -1,0 +1,17 @@
+public interface IRepository {
+    /**
+     * «
+     * Прочитать
+     *  »
+     * текстовый файл
+     * @param file_name
+     * @return
+     */
+    public IFileContent readTxtFile(String file_name) throws Exception;
+
+    /**
+     * данная функция не только читает файл но и возвращает ошибку в процессе
+     * чтения файла
+     */
+
+}
