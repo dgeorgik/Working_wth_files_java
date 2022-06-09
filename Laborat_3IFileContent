@@ -1,0 +1,12 @@
+public interface IFileContent {
+    /**
+     *Добавить очередную строку
+     * @return
+     */
+    public void AddStroku(String line);
+
+    /**
+     * Эта функция возвращает количество знаков препинания
+     */
+    public int getNumberChart();
+}
