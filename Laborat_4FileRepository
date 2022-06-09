@@ -1,0 +1,35 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+public class FileRepository implements IRepository {
+
+    @Override
+    public IFileContent readTxtFile(String file_name) throws Exception {
+        FileReader reader = new FileReader(file_name);
+        Scanner scanner = new Scanner(reader);
+        IFileContent asb = new Entity();
+        while (scanner.hasNext()) {
+            String temp = scanner.nextLine();
+            asb.AddStroku(temp);
+
+            // System.out.println(temp);
+        }
+        return asb;
+    }
+
+    @Override
+    public IFileContent writeTxtFile(String file_name) throws Exception {
+        FileWriter writer = new FileWriter(file_name);
+        IFileContent abc = new Entity();
+        Scanner scanner = new Scanner(writer.toString());
+        // System.out.println(temp);
+        while (scanner.hasNext()) {
+            String temp = scanner.nextLine();
+            abc.AddStroku(temp);
+            // System.out.println(temp);
+        }
+        return abc;
+    }
+}
