@@ -1,0 +1,19 @@
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class FileRepository implements IRepository {
+
+    @Override
+    public IOpisanieSodergFile ReadWorkingFile(String NameOfFile) throws Exception {
+        FileReader reader = new FileReader(NameOfFile);
+        Scanner scanner = new Scanner(reader);
+        IOpisanieSodergFile opisanie = new Pojo();
+        while(scanner.hasNext()){
+            String param = scanner.nextLine();
+            opisanie.AddStrok(param);
+           // System.out.println(param);
+        }
+
+        return opisanie;
+    }
+}
