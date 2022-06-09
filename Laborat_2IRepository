@@ -1,0 +1,11 @@
+public interface IRepository {
+
+    /**
+     * Функция отвечающая за чтение файла, а также
+     * всплывание возникающих ошибок:
+     * @param NameOfFile
+     * @return
+     * @throws Exception
+     */
+    public IOpisanieSodergFile ReadWorkingFile(String NameOfFile) throws Exception;
+}
