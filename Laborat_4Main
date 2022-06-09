@@ -1,0 +1,10 @@
+public class Laba10_4 {
+    public static void main(String[] args) throws Exception {
+        IRepository newRep = new FileRepository();
+        IFileContent a =  newRep.readTxtFile(".idea/resources/Example2.txt");
+        System.out.print("" + a.getCountInFile());
+        IFileContent b = newRep.writeTxtFile(".idea/resources/Example2.txt");
+        System.out.print("" + b.getCountInFile());
+    }
+}
+
