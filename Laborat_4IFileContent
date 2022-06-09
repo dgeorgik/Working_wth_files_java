@@ -1,0 +1,9 @@
+public interface IFileContent {
+    /**
+     *Добавить очередную строку
+     * @return
+     */
+    public void AddStroku(String line);
+    public int getCountInFile();
+
+}
