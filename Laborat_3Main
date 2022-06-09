@@ -1,0 +1,7 @@
+public class Laba10_3 {
+    public static void main(String[] args) throws Exception {
+        IRepository newRep = new FileRepository();
+        IFileContent a =  newRep.readTxtFile(".idea/resources/Example1.txt");
+        System.out.print("" + a.getNumberChart());
+    }
+}
