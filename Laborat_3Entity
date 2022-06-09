@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Entity implements IFileContent{
+    List<String> NashText = new ArrayList<String>();
+    @Override
+    public void AddStroku(String line) {
+        NashText.add(line);
+    }
+    @Override
+    public int getNumberChart() {
+        int retValue = 0;
+        int kolVoAll = 0;
+        for (String temp: NashText) {
+            for (int i = 0; i < temp.length(); i++) {
+                String s = temp.substring(i, i+1);
+                kolVoAll++;
+                if(s.equals(" ")) retValue++;
+                //System.out.println(temp.length());
+            }
+        }
+        System.out.println("Общее кол-во знаков/символов: " + kolVoAll);
+        System.out.println("Кол-во пробелов: " + retValue);
+        retValue = kolVoAll - retValue;
+        return retValue;
+    }
+}
