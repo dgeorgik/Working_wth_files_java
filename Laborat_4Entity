@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Entity implements IFileContent {
+    List<String> NashText = new ArrayList<String>();
+
+    @Override
+    public void AddStroku(String line) {
+        NashText.add(line);
+    }
+
+    @Override
+    public int getCountInFile() {
+        int retValue = 0;
+        int answer1 =0;
+        int answer2 =0;
+        for (String temp : NashText) {
+            String s = temp;
+            String [] f = s.split("/");
+                 for (String num : f){
+                     //System.out.println(num);
+                     answer1 = Integer.parseInt(f[0]);
+                     answer2 = Integer.parseInt(f[1]);
+                 }
+            }
+        retValue = answer1 / answer2;
+        //System.out.println(retValue);
+        return retValue;
+    }
+}
