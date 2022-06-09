@@ -1,0 +1,13 @@
+public interface IOpisanieSodergFile {
+
+    /**
+     * Функция добавляет строку за строкой
+     * @param OneLine
+     */
+    public void AddStrok(String OneLine);
+
+    /**
+     * Функция возвращает сумму цифр из файла
+     */
+     public int getNumberInFile();
+}
