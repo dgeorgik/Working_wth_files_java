@@ -1,0 +1,19 @@
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class FileRepository implements IRepository {
+    @Override
+    public IFileContent readTxtFile(String file_name) throws Exception {
+        FileReader reader = new FileReader(file_name);
+        Scanner scanner = new Scanner(reader);
+        IFileContent asb = new Entity();
+        while(scanner.hasNext()){
+        String temp = scanner.nextLine();
+            asb.AddStroku(temp);
+
+       // System.out.println(temp);
+        }
+        return asb;
+    }
+}
+
